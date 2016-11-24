@@ -1,10 +1,16 @@
-package javaexmple;
+package sort;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.omg.CosNaming.NamingContextExtPackage.AddressHelper;
-
+/**
+ * 使用二叉堆，它是一棵完全二叉树。每个节点大于或等于它的任意一个孩子
+ * 时间复杂度：O(nlogn)
+ * @author LYW
+ *
+ * @param <E>
+ */
 public class Heap<E extends Comparable> {
 	public ArrayList<E> list = new ArrayList<>();
 

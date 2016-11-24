@@ -1,5 +1,7 @@
 package javaexmple;
 
+import sort.Heap;
+
 /**
  * 使用堆来实现优先队列，其中根节点是队列中具有最高优先级的对象。
  * @author LYW

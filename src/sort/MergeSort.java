@@ -1,7 +1,12 @@
-package javaexmple;
+package sort;
 
 public class MergeSort {
-
+	
+/**
+ * 核心：将数组分为两半，对每部分递归地应用归并排序。在两部分都排序好后，对它们进行归并
+ * 时间复杂度：O(n*log n)
+ * @param list
+ */
 	public static void mergesort(int[] list) {
 		// 递归调用这个直到分成一个元素为止
 		if (list.length > 1) {
@@ -37,13 +42,29 @@ private static int count = 0;
 		}
 		while (currentIndex2 < list2.length) {
 			temp[currentIndex3++] = list2[currentIndex2++];
-		}
 		for (int i = 0; i < temp.length; i++) {
 			System.out.print(temp[i]+" ("+count +")");
 		}
+	
+	}
 		return temp;
 	}
 
+	
+	/**
+	 * 归并排序的泛型方法
+	 * @param args
+	 */
+	 public static <E extends Comparable<E>> void mergeSort(E[] list) {
+//	         if (list.length >1) {
+//				  E[] firstHalf = new  E[list.length/2];
+//				  System.arraycopy(list, 0, firstHalf, 0, list.length/2);
+//				  mergeSort(firstHalf);
+//			   
+//	         }
+	}
+	 
+	 
 	public static void main(String[] args) {
 		int[] a = { 2, 3,  1, 6, 5, -2, 3, 14, 12 };
 		mergesort(a);
